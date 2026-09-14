@@ -1,19 +1,21 @@
 class error {
 	public static void main(String args[]) {
         
-		system.out.println"Happy vacation day back!";
-        system.out.println"What'd you do this weekend?
-                           I watched a movie!";
+		System.out.println("Happy vacation day back!");
+        System.out.println("What'd you do this weekend?");
+        System.out.println("I watched a movie!");
 
-		int new number = 125;
+		double count = 125.0;
 		System.out.println(count);
 
-		int num1 = 12.2;
-		int num2 = 14.3;
-		answer = num1 * num2 + answer;
+		double num1 = 12.2;
+		double num2 = 14.3;
+		double answer = 10.00;
+		double ans = num1 * num2 + answer;
 		
-		System.out.println(answer)
+		System.out.println(ans);
 
 		System.out.println("I now have 0 errors!!!");		
 	}
 
+}
