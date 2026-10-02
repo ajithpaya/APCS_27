@@ -8,8 +8,26 @@ import java.util.Scanner;
 
 class starter {
 	public static void main(String args[]) {
-		// the string "I love to learn coding remotely." will appear in
-		// the command window when you compile and run this program.
-		System.out.print("I love to learn coding remotely.");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter a integer: ");
+		int numone = sc.nextInt();
+		if (numone % 3 == 0 && numone % 4 == 0 &&  numone % 5 == 0) {
+			System.out.println(numone + " is  divisible by 3, 4, or 5!");
+		}
+		else{
+			System.out.println(numone + " is not divisible by 3, 4, or 5!");
+		}
+
+		System.out.println("Please enter a second integer: ");
+		int numtwo = sc.nextInt();
+		if (numtwo % 3 == 0 && numtwo % 4 == 0 &&  numtwo % 5 == 0) {
+			System.out.println(numtwo + " is  divisible by 3, 4, or 5!");
+		}
+		else{
+			System.out.println(numtwo + " is not divisible by 3, 4, or 5!");
+		}
+
+
 	}
-}
+	}
+
