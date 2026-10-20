@@ -2,7 +2,7 @@
  *	Author:  
  *  Date: 
 */
-
+//worked with alex poledian and my dad
 import java.io.*;
 import java.util.*;
 import java.time.*;
@@ -13,9 +13,51 @@ class starter {
 	static ArrayList<String> arr = new ArrayList<String>();
 
 	public static void main(String args[]) throws InterruptedException {
-		// Write your code here!
+	Scanner sc = new Scanner(System.in);
 
-		
+		boolean running = true;
+
+		while (running){
+			System.out.println("pick one");
+			System.out.println(" 1 -  random");
+			System.out.println(" 2 -  set");
+			System.out.println(" 3 - stop");
+			System.out.println();
+			int choice = sc.nextInt();
+			sc.nextLine();
+			String sentence = "";
+			if (choice == 1){
+				System.out.println("random sentance");
+				sentence = getSentence();
+			}
+			else if (choice == 2){
+				System.out.println("what number sentace");
+				int num = sc.nextInt();
+				sc.nextLine();
+				sentence = getSentence(num - 1);
+			}
+			else if (choice == 3){
+				running = false;
+			}
+			if (sentence.length() > 0){
+				System.out.println();
+				System.out.println("your sentence is");
+				System.out.println(sentence);
+				System.out.println();
+				countdown();
+				startTimer();
+				String typed = sc.nextLine();
+				double time = endTimer();
+					int errors = compareSentences(sentence, typed);
+					int letters = lettersInSentence(sentence);
+					int words = wordsInSentence(sentence);
+				System.out.println("Nice job! Here is your result!");
+				System.out.println("Time: " + time);
+				System.out.println("Errors: " + errors + " / " + letters + " letters");
+				System.out.printf(" letters per minute", (letters / time) * 60);
+				System.out.printf(" words per minute", (words / time) * 60);}
+			
+	}
 	}
 
 	// This method returns the local current time as a String
