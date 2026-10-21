@@ -51,7 +51,7 @@ class starter {
 					int errors = compareSentences(sentence, typed);
 					int letters = lettersInSentence(sentence);
 					int words = wordsInSentence(sentence);
-				System.out.println("Nice job! Here is your result!");
+				System.out.println("Nice job Here is your result!");
 				System.out.println("Time: " + time);
 				System.out.println("Errors: " + errors + " / " + letters + " letters");
 				System.out.printf(" letters per minute", (letters / time) * 60);
