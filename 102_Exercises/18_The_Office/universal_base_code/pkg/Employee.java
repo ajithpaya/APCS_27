@@ -10,7 +10,7 @@ public class Employee {
 	double salary;			// Stores monthly salary of the Employee
 
 	public Employee() {		// Default Constructor
-		ID = 9622;
+		ID = 1987;
 		firstName = new String("Michael");
 		lastName = new String("Scott");
 		salary = 6583.33;
