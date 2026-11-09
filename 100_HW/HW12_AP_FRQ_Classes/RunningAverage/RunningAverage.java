@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class RunningAverage{
     /** The number of ratings included in the running average. */
     private int count;
@@ -22,6 +21,10 @@ public class RunningAverage{
     */
     public void updateAverage(double newVal){
         /* to be implemented in part (a) */
+        double sum = average * count;
+        sum = sum + newVal;
+        count ++;
+        average = sum/count;
     }
 
 
@@ -33,10 +36,25 @@ public class RunningAverage{
     */
     public int processNewRatings(int num){
         /* to be implemented in part (b) */
+        int error = 0;
+        int temp =2;
+        while(temp < num){
+            double rating = getNewRating();
+            if (rating <= 0){
+                updateAverage(rating);
+            }else {
+                error ++;
+            }
+        }
+        return error;
     }
 
     /** Returns a single numeric rating. */
     public double getNewRating(){
         /* implementation not shown */
+        double myRating = 1+(Math.random() * 10);
+        return myRating;
+
+
     }
 }
