@@ -13,10 +13,11 @@ class starter {
 		Donkey donkey = new Donkey();
 		Ogre shrek = new Ogre();
 		if(shrek.isUgly()){
-			String statement = new String(shrek.name + " IS UGLY!");
+		statement = shrek.getName() + " IS UGLY!";
 		}
 		System.out.println(statement);
 		donkey.interact(shrek);
+		int i;
 		for(int i = 0; i < 5; i++){
 			shrek.interact(donkey);
 		}
